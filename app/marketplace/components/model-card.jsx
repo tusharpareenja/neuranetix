@@ -18,7 +18,7 @@ export default function ModelCard({
 }) {
   return (
     <div className="overflow-hidden rounded-lg border border-[#2A2A2A] bg-[#1A1A1A] transition-all duration-300 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/10">
-      <Link href={`/model/${id}`} className="block">
+      <Link href={`/marketplace/model/${id}`} className="block">
         <div className="relative aspect-[4/3] w-full overflow-hidden">
           <Image
             src={image || "/placeholder.svg"}

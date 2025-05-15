@@ -2,7 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import { PlusCircle } from "lucide-react"
 import ModelsTable from "./components/model-table"
-import Sidebar from "../home/components/sidebar"
+import Sidebar from "../marketplace/components/sidebar"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { UserNav } from "./components/user-nav"
 

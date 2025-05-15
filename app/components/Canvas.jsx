@@ -7,6 +7,7 @@ import logo from '../../public/neuronetix.png'
 import Image from "next/image"
 import logo2 from '../../public/logo2.png'
 
+
 export default function VantaWaves() {
   const vantaRef = useRef(null)
   const [vantaEffect, setVantaEffect] = useState(null)
@@ -169,8 +170,8 @@ export default function VantaWaves() {
           </nav>
 
           <div className="mt-12 space-y-4">
-            <Link href="/become-member" className="block w-full bg-black text-white text-center py-4 rounded">
-              Become a member
+            <Link href="/marketplace" className="block w-full bg-black text-white text-center py-4 rounded">
+              Marketplace
             </Link>
             <Link href="/login" className="block w-full border border-black text-center py-4 rounded">
               Log In
@@ -193,15 +194,20 @@ export default function VantaWaves() {
         </h2>
 
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8 sm:mt-12">
-          <button className="bg-white text-black px-6 py-3 rounded hover:bg-gray-200 w-full sm:w-auto">
-            Become a member
+          <Link
+           href='/marketplace'
+          >
+          <button className="bg-white hover:cursor-pointer text-black px-6 py-3 rounded hover:bg-gray-200 w-full sm:w-auto">
+            Marketplace
           </button>
+          </Link>
+          
           <button className="bg-black/50 text-white border border-white/20 px-6 py-3 rounded hover:bg-black/70 flex items-center justify-center sm:justify-start w-full sm:w-auto">
             <div className="flex -space-x-2 mr-2">
               <div className="w-6 h-6 rounded-full bg-gray-400"></div>
               <div className="w-6 h-6 rounded-full bg-gray-600"></div>
             </div>
-            About us
+            Get Started
           </button>
         </div>
 

@@ -15,7 +15,7 @@ import {
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-export default function Sidebar() {
+export default function Sidebar({ isMobile = false }) {
   const pathname = usePathname()
 
   const isActive = (href) => pathname === href
@@ -28,14 +28,14 @@ export default function Sidebar() {
     }`
 
   return (
-    <aside className="hidden md:block w-64 shrink-0 border-r border-[#2A2A2A] bg-[#121212] p-4">
+    <div className={`${isMobile ? "" : "hidden md:block"} w-64 ml-2 mt-4 shrink-0 bg-[#121212]`}>
       <div className="space-y-6">
         {/* Discover */}
         <div>
           <h3 className="mb-2 text-xs font-semibold uppercase text-gray-400">Discover</h3>
           <ul className="space-y-1">
             <li>
-              <Link href="/home" className={linkClass("/home")}>
+              <Link href="/marketplace" className={linkClass("/marketplace")}>
                 <Compass className="h-5 w-5 text-gray-400" />
                 <span>Browse</span>
               </Link>
@@ -44,6 +44,12 @@ export default function Sidebar() {
               <Link href="/popular" className={linkClass("/popular")}>
                 <Star className="h-5 w-5 text-gray-400" />
                 <span>Popular</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/upload" className={linkClass("/upload")}>
+                <Star className="h-5 w-5 text-gray-400" />
+                <span>Upload</span>
               </Link>
             </li>
             <li>
@@ -145,6 +151,6 @@ export default function Sidebar() {
           </ul>
         </div>
       </div>
-    </aside>
+    </div>
   )
 }
